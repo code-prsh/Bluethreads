@@ -12,10 +12,6 @@ router.post('/login',loginController);
 
 router.post('/forgot-password', forgotPasswordController);
 
-router.post('/verify-otp', verifyOtpController);
-
-router.post('/send-otp', sendOtpController);
-
 router.get('/test',requireSignIn,isAdmin,testController);
 
 router.get("/user-auth",requireSignIn,(req,res) => {
